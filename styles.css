@@ -390,7 +390,7 @@ main h1, main h2, main p, main div {
 }
 .form-group input, .form-group select {
     height: 25px;
-    width: 100%;
+    width: 70%;
     margin-left: 20%;
 }
 .form-group select {
@@ -1267,196 +1267,183 @@ En dispositivos móviles, es vital asegurarse de que todo el contenido sea legib
         height: 30vh;  /* Reduce más la altura para móviles*/
     }
 }
-#contact-again {
-    display: flex;
-    justify-content: space-between;
-    flex-direction: row;
-    align-items: flex-start;
-    background-color: #fbf4e1;
-    /* padding: 20px;  Añadir padding a ambos lados */
-    font-family: 'AbhayaLibre', sans-serif;
-    max-width: 100%;  /*Ocupa el ancho completo
-    /* width: 100%; */
-    margin: 0 -20%;  /* Centrar el contenido horizontalmente*/
-}
 
-.new-contact-form {
-    background-color: #a1dcdc;
-    /* padding: 20px; */
-    flex: 0 0 60%;
-    max-width: 100%;
-    margin-left: 30%;
-}
-
-/* .new-contact-form, .here {
-    background-color: #a1dcdc;
-    padding: 20px;
-    flex: 1;
-} */
-.new-contact-form h2, .tuhere h1, .tuhere h2 {
-    font-size: 2em;
-    color: #212529;
-    margin-bottom: 20px;
-}
-
-.form-group {
-    margin-bottom: 15px;
-}
-
-.new-contact-form input, 
-.new-contact-form textarea, 
-.new-contact-form select {
+#new-two-columns {
     width: 100%;
-    padding: 10px;
-    font-size: 0.6em;
-    border: none;
-    background-color: #ffffff;
-    color: #757f98;
-    margin-bottom: 15px;
-    font-family: 'hind', sans-serif;
-    /* cursor: pointer; */
+    background-color: #002e5f;
+    margin-right: 0;
+    /* display: flex; */
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
 }
-
-button.second-form {
-    background-color: #e71557;
-    color: #ffffff;
-    width: 70%;
-    padding: 5px;
-    margin-bottom: 10%;
-    border: none;
-    border-radius: none;
-    font-size: 1em;
-    font-weight: lighter;
-    cursor: pointer;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.new-contact-form select {
-    -webkit-appearance: none; /* Elimina la apariencia predeterminada en Safari y Chrome */
-    -moz-appearance: none;    /* Elimina la apariencia predeterminada en Firefox */
-    appearance: none;         /* Elimina la apariencia predeterminada para el estándar */
-    background-image: url('images/icons/down-arrow_134210.png'); /* Ajusta la ruta al ícono */
-    background-repeat: no-repeat;
-    background-position: right 10px center; /* Ajusta esto según el tamaño de tu elemento select */
-    background-size: 12px 12px; /* Ajusta según el tamaño del ícono */
-    border: none; /* Estilo del borde que prefieras */
-    padding-right: 30px; /*Espacio adicional a la derecha para no sobreescribir el ícono*/
-    cursor: pointer; /* Cambia el cursor para indicar interactividad */
-    width: 70%; /* Asegura que el select use todo el ancho disponible */
-    height: 30px;
-    padding: 10px 10px 8px 10px; /*Espacio interno para hacerlo más accesible*/
-    color: #757f98; /* Color del texto dentro del select */
-    font-size: 0.6em;
-    padding: 8px, 10px;
-    font-family: 'Hind', sans-serif;
-}
-.form-group input:focus, .form-group textarea:focus {
-    border-color: #e71557;  /* Destaca el campo al enfocar */
-}
-
-.form-group-terms {
+#new-two-columns .new-row {
     display: flex;
-    align-items: end;
-    margin-top: 20px;
-    margin-bottom: 20px;
-    font-family: 'Hind', sans-serif ;
-    font-size: 0.8em;
-    cursor: pointer;
+    flex-wrap: wrap; /* Asegura que se adapten correctamente en tamaños de pantalla más pequeños */
+}
+.new-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
 }
 
-.form-group-terms {
+.new-row {
+    display: flex;
+}
+
+#new-contact, #new-services {
+    flex: 0 0 50%; /* Asegura que cada columna tome exactamente la mitad del espacio disponible */
+    max-width: 50%; /* Limita el ancho máximo al 50% del contenedor para evitar desbordamientos */
+    padding: 20px; /* Añade un poco de espacio interno para separar el contenido de los bordes del contenedor */
+    box-sizing: border-box; /* Asegura que el padding y el border se incluyan en el ancho total */
+}
+#new-contact {
+    background-color: #a1dcdc;
+    margin-left: -64px;
+}
+#new-services {
+    background-color: #002e5f;
+}
+#new-contact h2 {
+    color: #212529;
+    font-size: 2em;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 20px;
+    font-family: 'AbhayaLibre', sans-serif;
+}
+.new-contact-form .form-group {
+    margin-bottom: 15px;
+}
+.new-contact-form .form-group input,
+.new-contact-form .form-group select,
+.new-contact-form .form-group textarea {
+    width: 100%;
+    padding: 8px;
+    font-size: 0.9em;
+    border: 1px solid #ccc; /* Añade un poco de estilo al borde */
+    margin-bottom: 10px;
+}
+.new-contact-form .form-group select {
+    background-color: #ffffff;
+    cursor: pointer;
+    background-image: url('images/icons/down-arrow_134210.png');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    background-size: 15px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.new-contact-form .form-group-terms {
     display: flex;
     align-items: center;
+    font-size: 0.8em;
+    margin-top: 10px;
+    margin-left: 50px;
+}
+.form-group-terms {
+    display: flex;
+    justify-content: flex-end; /* Alinea el contenido a la derecha */
+    align-items: center; /* Centra los elementos verticalmente */
     margin-top: 20px;
-    margin-right: 52%;
-    font-size: 0.8em;
-    font-family: 'Hind',sans-serif;
-    cursor: pointer;
-}
-.form-group-terms label {
-    margin: 0;
-    cursor: pointer; /* Igualmente para la etiqueta */
-    /* margin-top: 10px; */
-    font-size: 0.8em;
-}
-
-button[type="submit"]:hover {
-    background-color: #212529;
-    transform: scale(1.05);
-}
-
-.tuhere {
-    flex: 0 50% 0; /* Asegura que el panel ocupe el 100% del ancho en móviles */
-    max-width: 100%; /* Asegura que el panel no exceda el ancho del contenedor */
-    background-color: #002e5f;
-    padding: 20px;
-    color: #ffffff;
-    text-align: left;
-}
-#tuhere2 {
-    flex: 1;
-    padding: 20px;
-    background-color: #002e5f;
-    margin-left: 65%;
-    text-align: left;
-    /* margin-top: 10%; */
-    
-    width: 100%;
-}
-.new-contact-form h2, .tuhere h1, .tuhere h2 {
-    font-size: 2em;
-    color: #212529;
     margin-bottom: 20px;
-}
-.tuhere h1 {
-    font-family: 'AbhayaLibre', sans-serif;
-    font-size: 3em;
-    color: #ffffff;
-    margin-left: 50%;
-    margin-right: -20%;
-}
-#tuhere h1:first-child {
-    margin-top: 60%;
-}
-.tuhere h2 {
-    font-family: 'Hind', sans-serif;
-    font-weight: normal;
-    font-size: 2.5em;
-    color: #ffffff;
-    margin-bottom: 20%;
-    margin-left: 50%;
-}
-.tuhere p {
     font-family: 'Hind', sans-serif;
     font-size: 1em;
-    color: #ffffff;
-    margin-left: 50%;
+    cursor: pointer;
 }
-#tuhere p:first-child {
-    margin-top: 20%;
+.new-contact-form .form-group-terms input[type="checkbox"] {
+    margin-right: 10px;
+}
+
+.new-contact-form .form-group-terms label {
+    cursor: pointer;
+}
+.new-contact-form button.second-form {
+    background-color: #e71557;
+    color: #ffffff;
+    padding: 10px 20px;
+    font-size: 1em;
+    border: none;
+    cursor: pointer;
+    width: auto;
+    transition: background-color 0.3s;
+}
+.new-contact-form button.second-form:hover {
+    background-color: #212529;
+}
+#new-services .new-service-item {
+    display: flex;
+    align-items: center;
+    /* margin: 30px; */
+    background-color: #002e5f;
+}
+
+#new-services .tuhere h1,
+#new-services .tuhere h2 {
+    color: #ffffff;
+    font-family: 'AbhayaLibre', sans-serif;
+    margin-left: 80px;
+}
+#new-services .tuhere h1 {
+    margin-top: 80px;
+}
+#new-services .tuhere p {
+    color: #ffffff;
+    font-family: 'Hind', sans-serif;
+    margin-left: 80px;
+    line-height: 1.2;
+}
+#new-services .tuhere p:first-of-type {
+    margin-top: 40px;
 }
 /* Media Queries para Tablets */
 @media (max-width: 768px) {
-    .new-contact-form, .tuhere {
-        padding: 15px;  /* Reduce el padding para un mejor ajuste en tablets*/
-        margin-left: 0;  /*Ajusta la alineación*/
+    #new-two-columns {
+        flex-direction: column;
     }
-    .form-group input, .form-group textarea, .form-group select {
-        width: 100%;  /* Aumenta el ancho para usar todo el espacio disponible*/
-        font-size: 1em;  /* Aumenta la fuente para mejor legibilidad*/
+
+    #new-contact, #new-services {
+        flex: 0 0 100%; /* Hace que cada bloque ocupe el 100% del ancho disponible */
+        max-width: 100%;
     }
-    .form-group textarea {
-        height: 150px;  /* Ajusta la altura para mejor visualización*/
+
+    #new-contact {
+        order: 1; /* Puede ajustar el orden si prefiere que contact vaya primero */
     }
-    .form-group select {
-        height: auto;  /* Ajusta la altura a auto para mejor consistencia*/
-    }
-    .tuhere {
-        flex-direction: column;  /* Alinea los elementos verticalmente*/
-        align-items: center;  /* Centra los elementos horizontalmente*/
+
+    #new-services {
+        order: 2;
     }
 }
 
+/* Media Queries para Móviles */
+@media (max-width: 480px) {
+    .new-container {
+        padding: 10px; /* Reduce el padding para dispositivos más pequeños */
+    }
+
+    #new-contact h2, #new-services .tuhere h1, #new-services .tuhere h2 {
+        font-size: 1.5em; /* Reduce el tamaño de la fuente para una mejor legibilidad en dispositivos pequeños */
+        margin-left: 10px; /* Ajusta los márgenes para alinear correctamente el texto */
+    }
+
+    #new-services .tuhere p {
+        margin-left: 10px; /* Alinea el texto más cerca al borde en dispositivos pequeños */
+        line-height: 1.5; /* Aumenta el line-height para mejorar la legibilidad */
+    }
+
+    .form-group-terms {
+        flex-direction: column; /* Cambia la disposición de los términos a vertical */
+        align-items: flex-start; /* Alinea los elementos al inicio */
+        margin-left: 0;
+    }
+
+    .form-group-terms input[type="checkbox"] {
+        margin-bottom: 10px; /* Añade espacio entre la casilla y la etiqueta */
+    }
+}
 /* Media Queries para Móviles */
 @media (max-width: 480px) {
     .questions-container {
@@ -1551,6 +1538,24 @@ button[type="submit"]:hover {
 .social-icons a:hover {
     color:#a1dcdc;
 }
+@media (max-width: 768px) {
+    .right2-column {
+        justify-content: center;  /* Centra el logo en dispositivos pequeños*/
+        padding: 10px 0;  /* Añade un poco de padding para separación*/
+    }
+    .right2-column img {
+        max-width: 250px;  /* Reduce el tamaño del logo para mejor ajuste*/
+        height: auto;  /* Mantiene la proporción del logo*/
+    }
+    .links-container {
+        margin: 0 auto;  /* Reduce o elimina el margen para pantallas pequeñas*/
+        padding: 10px;  /*Añade padding para mantener el contenido dentro de los bordes*/
+    }
+    .right2-column img {
+        content: url('images/version 2 lineas negativo.png'); /* Cambia la imagen del logo a una versión horizontal */
+    }
+}
+
 footer {
     background-color: #002e5f;
     color: #a1dcdc;
